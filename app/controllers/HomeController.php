@@ -10,6 +10,7 @@
         public function index()
         {
             $products = Product::all();
+            dd($products);
             include_once './views/homepage.php';
         }
 

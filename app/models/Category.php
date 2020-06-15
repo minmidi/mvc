@@ -2,9 +2,10 @@
 
     // tạo namespace
     namespace App\Models;
+    use Illuminate\Database\Eloquent\Model;
 
-    class Category extends BaseModel
+    class Category extends Model
     {
-        var $table = "category";
+        protected $table = "category";
     }
 ?>

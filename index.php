@@ -4,8 +4,8 @@
 
     // /* REQUIRE CÁC FILE */
 
-    // // 1. Require thư viện util.php
-    // require_once "./commoms/util.php";
+    // 1. Require thư viện util.php
+    require_once "./commoms/util.php";
 
 
     // // 2. Require HomeController
@@ -24,6 +24,8 @@
 
     // KHI SỬ DỤNG AUTOLOAD THÌ CHỈ CẦN REQIURE FILE AUTOLOAD TRONG VENDOR
     require_once './vendor/autoload.php';
+    // ĐỂ SỬ DỤNG DATABASE ILUMMINATE REQUIRE SAU FILE AUTOLOAD
+    require_once './commoms/database-config.php';
 
     // Use Controller
     use App\Controllers\HomeController;

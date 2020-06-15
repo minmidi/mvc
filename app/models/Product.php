@@ -2,9 +2,9 @@
 
     // tạo namespace
     namespace App\Models;
-
-    class Product extends BaseModel
+    use Illuminate\Database\Eloquent\Model;
+    class Product extends Model
     {
-        var $table = "product";
+        protected $table = "product";
     }
 ?>
