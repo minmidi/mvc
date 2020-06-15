@@ -1,4 +1,8 @@
 <?php
+
+// tạo namespace
+namespace App\Controllers;
+
 class ProductController
 {
     public function addForm()

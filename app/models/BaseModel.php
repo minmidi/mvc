@@ -1,10 +1,15 @@
 <?php
+
+    // tạo namespace
+    namespace App\Models;
+    use PDO;
+    
     class BaseModel
     {
         /* TẠO HÀM CONNECT DATABASE */
         function __construct()
         {
-            $this->conn = new PDO("mysql:host=localhost;dbname=mvc;charset=utf8",
+            $this->conn = new PDO("mysql:host=localhost;dbname=mvc_ot;charset=utf8",
                         "root","");
         }
 
