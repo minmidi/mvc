@@ -10,28 +10,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-      
-    <table class="table table-striped table-inverse table-responsive">
-        <thead class="thead-inverse">
+    
+    <div class="container">
+        <nav class="nav">
+            <a href="nav-link" href="./">Quản lý sản phẩm</a>
+            <a href="nav-link" href="./add-product">Quản lý sản phẩm</a>
+            <a href="nav-link" href="./category">Quản lý sản phẩm</a>
+            <a href="nav-link" href="./add-fcategory">Quản lý sản phẩm</a>
+        </nav>
 
-                <th>ID</th>
-                <th>Name</th>
-                <th>Slug</th>
-                <th>Price</th>
-                <th>Description</th>
-            </thead>
-            <tbody>
-                <?php foreach($products as $pro) :?>
-                    <tr>
-                    <td><?= $pro['id']?></td>
-                    <td><?= $pro['name']?></td>
-                    <td><?= $pro['slug']?></td>
-                    <td><?= $pro['price']?></td>
-                    <td><?= $pro['description']?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-    </table>
+        <!-- Query String -->
+        <!-- form data -->
+
+        <form action="./save-add-product" method="POST" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="">Tên sản phẩm</label>
+                <input type="text" name="name" id="" class="form-control" placeholder="Nhập tên sản phẩm" aria-describedby="helpId">
+                <small id="helpId" class="text-muted">Help text</small>
+              </div>
+            </div>
+          </div>
+      </form>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -3,15 +3,23 @@
     // tạo namespace
     namespace App\Controllers;
     use App\Models\Product;
+     
 
-
-    class HomeController
+    class HomeController extends BaseController
     {
         public function index()
         {
             $products = Product::all();
-            dd($products);
-            include_once './views/homepage.php';
+            return $this->render('homepage.index', ['listItem' => $products]);
+            
+
+            // $products = Product::where('price' , '<=' , 40000)
+            //                     -> orderBy('price','desc')
+            //                     ->limit(2)
+            //                     ->get();
+            // //dd($products);
+           
+            // include_once './views/homepage.php';
         }
 
         public function detail()

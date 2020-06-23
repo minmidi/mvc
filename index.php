@@ -53,16 +53,29 @@
             echo $ctr->contact();
             break;
 
-        case 'add-product':
+        case 'add-product': 
             $ctr = new ProductController();
             echo $ctr->addForm();
+            break;
+
+        case 'edit-product':
+            $ctr = new ProductController();
+            echo $ctr->editForm();
+            break;
+
+        case 'delete-product':
+            $ctr = new ProductController();
+            echo $ctr->deleteForm();
             break;
 
         case 'list-category':
             $ctr = new CategoryController();
             echo $ctr->index();
             break;
-
+        case 'insert-category':
+            $ctr = new CategoryController();
+            echo $ctr->addData();
+            break;
         default:
             echo "đường dẫn không tồn tại";
             break;
